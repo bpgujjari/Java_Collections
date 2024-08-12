@@ -115,6 +115,8 @@ public class ArrayListEx1 {
 		emps.sort(Comparator.comparing(Employee::getName));
 		emps.forEach(System.out::println);
 		
+		emps.add(null);
+		
 		
 		
 		
