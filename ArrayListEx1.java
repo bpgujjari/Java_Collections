@@ -8,6 +8,7 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.ListIterator;
 import java.util.Vector;
+import java.util.stream.Collectors;
 
 public class ArrayListEx1 {
 	public static void main(String[] args) {
@@ -115,7 +116,12 @@ public class ArrayListEx1 {
 		emps.sort(Comparator.comparing(Employee::getName));
 		emps.forEach(System.out::println);
 		
-		emps.add(null);
+		System.out.println("---------------------------------------");
+		System.out.println("Data sorting using stream.sorted() method");
+		
+		emps.stream().sorted(Comparator.comparing(Employee::getName)).forEach(System.out::println);
+		
+		
 		
 		
 		
